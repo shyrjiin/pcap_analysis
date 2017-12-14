@@ -1,0 +1,6 @@
+#useful for parsing through security onion's dailylogs folder for a specific search string.
+for i in *; do tcpdump -Avvv -r $i host x.x.x.x and port xx; done
+
+#same as above but for tshark
+for i in *; do tshark -r $i -Y "ip.addr eq x.x.x.x and tcp.port eq xx"; done
+
